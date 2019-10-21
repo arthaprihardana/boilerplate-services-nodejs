@@ -1,3 +1,1 @@
-# Sistem Informasi Desa
-
-## Deskripsi
+# Boilerplate service using NodeJS
