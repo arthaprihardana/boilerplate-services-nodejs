@@ -1,0 +1,15 @@
+{
+    "presets": [
+        ["@babel/env", {
+            "targets": {
+                "node": "current"
+            }
+        }]
+    ],
+    "plugins": [
+        "add-module-exports",
+        "transform-async-to-generator",
+        "transform-remove-console"
+    ],
+    "comments": false
+}
