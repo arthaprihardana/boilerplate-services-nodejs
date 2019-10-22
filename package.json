@@ -12,12 +12,12 @@
   "description": "Core Server Backend",
   "main": "/bin/www",
   "scripts": {
-    "start": "NODE_ENV=development nodemon --exec 'babel-node' bin/www",
-    "build": "gulp build",
-    "build:min": "gulp build && uglifyjs dist/app.js -o dist/app.min.js -c -m",
+    "start": "BABEL_ENV=development nodemon --exec 'babel-node' bin/www",
+    "build": "BABEL_ENV=staging gulp build",
+    "build:min": "BABEL_ENV=production gulp build && uglifyjs dist/app.js -o dist/app.min.js -c -m",
     "clean": "gulp clean && gulp cleanMinified",
-    "staging": "NODE_ENV=staging node bin/www",
-    "production": "NODE_ENV=production node bin/www"
+    "staging": "node bin/www",
+    "production": "node bin/www"
   },
   "keywords": [
     "Core Server Backend",
@@ -43,7 +43,9 @@
     "method-override": "^3.0.0",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
-    "rethinkdb": "^2.3.3"
+    "mysql2": "^1.7.0",
+    "rethinkdb": "^2.3.3",
+    "sequelize": "^5.21.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",

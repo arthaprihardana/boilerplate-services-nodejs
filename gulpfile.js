@@ -2,14 +2,12 @@
  * @author: Artha Prihardana 
  * @Date: 2019-06-09 15:05:10 
  * @Last Modified by: Artha Prihardana
- * @Last Modified time: 2019-10-21 16:16:09
+ * @Last Modified time: 2019-10-22 13:45:35
  */
 const { series, src, dest } = require('gulp');
 const javascriptObfuscator = require('gulp-javascript-obfuscator');
-// const babel = require('gulp-babel');
 const path = require('path');
 const del = require('del');
-// const pump = require('pump');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const rollupIncludePaths = require('rollup-plugin-includepaths');
 
@@ -18,8 +16,10 @@ const plugins = gulpLoadPlugins();
 const paths = {
     include: ['./**/*.js', '!dist/**', '!node_modules/**', '!gulpfile.babel.js', '!src/bin/**'],
     file: [
-        'src/middlewares',
+        'src/config',
+        'src/controllers',
         'src/models',
+        'src/models/mysql',
         'src/routes',
         'src/services'
     ],
@@ -46,7 +46,6 @@ function build() {
                 }),
                 plugins.babel({
                     exclude: 'node_modules/**',
-                    // presets: ['es2015-rollup']
                 })
             ]
         }))
