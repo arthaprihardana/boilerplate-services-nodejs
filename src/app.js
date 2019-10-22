@@ -2,7 +2,7 @@
  * @author: Artha Prihardana 
  * @Date: 2019-06-09 13:43:15 
  * @Last Modified by: Artha Prihardana
- * @Last Modified time: 2019-10-21 14:50:53
+ * @Last Modified time: 2019-10-22 11:33:03
  */
 import express from 'express';
 import cookieParser from 'cookie-parser';
@@ -19,6 +19,7 @@ import '@babel/polyfill';
 require('dotenv').config();
 
 import routes from './routes';
+// import './config/database';
 
 // mongoose.connect(process.env.MONGO_DATABASE, {
 //     autoIndex: false,
