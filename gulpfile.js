@@ -2,7 +2,7 @@
  * @author: Artha Prihardana 
  * @Date: 2019-06-09 15:05:10 
  * @Last Modified by: Artha Prihardana
- * @Last Modified time: 2019-10-22 13:45:35
+ * @Last Modified time: 2019-10-23 13:29:00
  */
 const { series, src, dest } = require('gulp');
 const javascriptObfuscator = require('gulp-javascript-obfuscator');
@@ -19,7 +19,6 @@ const paths = {
         'src/config',
         'src/controllers',
         'src/models',
-        'src/models/mysql',
         'src/routes',
         'src/services'
     ],
