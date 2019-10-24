@@ -2,12 +2,13 @@
  * @author: Artha Prihardana 
  * @Date: 2019-06-09 15:05:10 
  * @Last Modified by: Artha Prihardana
- * @Last Modified time: 2019-10-23 13:29:00
+ * @Last Modified time: 2019-10-24 11:22:43
  */
 const { series, src, dest } = require('gulp');
 const javascriptObfuscator = require('gulp-javascript-obfuscator');
 const path = require('path');
 const del = require('del');
+const log = require('fancy-log');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const rollupIncludePaths = require('rollup-plugin-includepaths');
 
@@ -52,7 +53,7 @@ function build() {
         .pipe(javascriptObfuscator({
             compact: true
         }))
-        .on('error', plugins.util.log)
+        .on('error', log)
         .pipe(plugins.rename('app.js'))
         .pipe(plugins.sourcemaps.write('.', {
             includeContent: false,
