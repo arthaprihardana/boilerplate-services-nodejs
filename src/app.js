@@ -2,16 +2,15 @@
  * @author: Artha Prihardana 
  * @Date: 2019-06-09 13:43:15 
  * @Last Modified by: Artha Prihardana
- * @Last Modified time: 2019-10-22 11:33:03
+ * @Last Modified time: 2019-10-24 16:09:37
  */
 import express from 'express';
 import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
+// import bodyParser from 'body-parser';
 import methodOverride from 'method-override';
 import compression from 'compression';
 import cors from 'cors';
-import mongoose from 'mongoose';
-import logSymbols from 'log-symbols';
+// import mongoose from 'mongoose';
 import logger from 'morgan';
 import createError from 'http-errors';
 

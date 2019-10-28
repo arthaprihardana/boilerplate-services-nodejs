@@ -2,7 +2,7 @@
  * @Author: Artha Prihardana 
  * @Date: 2019-10-22 09:19:47 
  * @Last Modified by: Artha Prihardana
- * @Last Modified time: 2019-10-23 09:54:43
+ * @Last Modified time: 2019-10-28 10:31:41
  */
 import Sequelize from 'sequelize';
 let DB_CONFIG;
@@ -21,8 +21,8 @@ switch (process.env.SELECT_DB) {
             process.env.MYSQL_USERNAME, 
             process.env.MYSQL_PASSWORD, 
             {
-                host: 'localhost',
-                port: 3306,
+                host: '127.0.0.1',
+                port: 3307,
                 dialect: 'mysql',
                 pool: {
                     max: 5,
